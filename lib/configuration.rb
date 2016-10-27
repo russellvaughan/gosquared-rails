@@ -53,7 +53,7 @@ module GosquaredRails
     end
 
     def identify
-      "_gs('identify', { id: #{gosquared_identified_user}; });"
+    "_gs('identify', { id: #{gosquared_identified_user}; });" unless gosquared_identified_user == nil
     end
 
 end

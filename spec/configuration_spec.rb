@@ -107,7 +107,11 @@ describe GosquaredRails::Configuration do
   it 'returns _gs identify method' do
     gs.gosquared_identified_user = "russ"
     expect(gs.identify).to eq "_gs('identify', { id: russ; });"
-    end
+  end
+
+  it 'returns nil if gosquared_identified_user is empty or nil' do
+    expect(gs.identify).to eq nil
+  end
 
 end
 
