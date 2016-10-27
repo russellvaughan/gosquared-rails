@@ -98,7 +98,18 @@ describe GosquaredRails::Configuration do
    end
  end
 
+ describe '#identify' do
 
+  it 'responds to #identify' do
+    expect(gs).to respond_to(:gosquared_identified_user)
+  end
+
+  it 'returns _gs identify method' do
+    gs.gosquared_identified_user = "russ"
+    expect(gs.identify).to eq "_gs('identify', { id: russ; });"
+    end
+
+end
 
 
 end

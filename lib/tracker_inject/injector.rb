@@ -16,8 +16,7 @@ class Injector
         d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
         insertBefore(d,q)}(window,document,'script','_gs');
         _gs('#{GosquaredRails.configure.site_token}', false);
-        #{GosquaredRails.configure.config_options}
-
+        #{GosquaredRails.configure.config_options},
 
         function track() {
           _gs('track');
